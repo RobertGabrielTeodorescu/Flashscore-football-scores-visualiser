@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox prefHeight="800.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MatchLineupsController">
+  <children>
+    <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="708.0" prefWidth="543.0" VBox.vgrow="ALWAYS">
+         <children>
+            <ImageView id="" fx:id="teamLogo1" fitHeight="100.0" fitWidth="100.0" layoutX="100.0" layoutY="35.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../team_logos/Liverpool.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="teamLogo2" fitHeight="100.0" fitWidth="100.0" layoutX="400.0" layoutY="35.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../team_logos/Wolves.png" />
+               </image>
+            </ImageView>
+            <Label fx:id="teamName1" alignment="CENTER" contentDisplay="CENTER" layoutX="74.0" layoutY="144.0" prefHeight="21.0" prefWidth="152.0" text="team1" textAlignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <Label fx:id="score" alignment="CENTER" contentDisplay="CENTER" layoutX="250.0" layoutY="63.0" prefHeight="45.0" prefWidth="100.0" text="score" textAlignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="30.0" />
+               </font>
+            </Label>
+            <Label fx:id="teamName2" alignment="CENTER" contentDisplay="CENTER" layoutX="374.0" layoutY="144.0" prefHeight="21.0" prefWidth="152.0" text="team2" textAlignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <Label fx:id="time" alignment="CENTER" contentDisplay="CENTER" layoutX="250.0" layoutY="117.0" prefHeight="18.0" prefWidth="100.0" text="time" />
+            <HBox layoutX="171.0" layoutY="225.0" prefHeight="50.0" prefWidth="251.0">
+               <children>
+                  <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#changeToMatchSummaryFrame" text="Match Summary" textAlignment="CENTER" />
+                  <Button alignment="CENTER" contentDisplay="CENTER" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#changeToMatchStatisticsFrame" text="Statistics" textAlignment="CENTER" />
+                  <Button alignment="CENTER" contentDisplay="CENTER" defaultButton="true" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" text="Lineups" textAlignment="CENTER" />
+               </children>
+            </HBox>
+            <VBox layoutX="250.0" layoutY="276.0" prefHeight="519.0" prefWidth="590.0" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="276.0">
+               <children>
+                  <HBox prefHeight="25.0" prefWidth="590.0">
+                     <children>
+                        <Label fx:id="formation1" prefHeight="27.0" prefWidth="194.0" text="formation" />
+                        <Label alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="27.0" prefWidth="203.0" text="Formation">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="formation2" alignment="CENTER_RIGHT" layoutX="170.0" layoutY="10.0" prefHeight="27.0" prefWidth="186.0" text="formation" />
+                     </children>
+                  </HBox>
+                  <Label alignment="BOTTOM_CENTER" prefHeight="31.0" prefWidth="590.0" text="Starting Lineups">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <HBox prefHeight="223.0" prefWidth="590.0">
+                     <children>
+                        <Label fx:id="starting_players1" alignment="TOP_LEFT" prefHeight="306.0" prefWidth="301.0" text="players" />
+                        <Label fx:id="starting_players2" alignment="TOP_RIGHT" layoutX="10.0" layoutY="10.0" prefHeight="306.0" prefWidth="301.0" text="players" />
+                     </children>
+                  </HBox>
+                  <HBox layoutX="10.0" layoutY="268.0" prefHeight="18.0" prefWidth="590.0">
+                     <children>
+                        <Label alignment="CENTER" prefHeight="25.0" prefWidth="590.0" text="Substitutes">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox layoutX="10.0" layoutY="66.0" prefHeight="167.0" prefWidth="590.0">
+                     <children>
+                        <Label fx:id="substitutes1" alignment="TOP_LEFT" prefHeight="306.0" prefWidth="301.0" text="players" />
+                        <Label fx:id="substitutes2" alignment="TOP_RIGHT" layoutX="10.0" layoutY="10.0" prefHeight="306.0" prefWidth="301.0" text="players" />
+                     </children>
+                  </HBox>
+                  <HBox layoutX="10.0" layoutY="269.0" prefHeight="18.0" prefWidth="590.0">
+                     <children>
+                        <Label alignment="CENTER" prefHeight="25.0" prefWidth="590.0" text="Coaches">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox layoutX="10.0" layoutY="287.0" prefHeight="31.0" prefWidth="590.0">
+                     <children>
+                        <Label fx:id="coach1" alignment="TOP_LEFT" prefHeight="306.0" prefWidth="301.0" text="coach" />
+                        <Label fx:id="coach2" alignment="TOP_RIGHT" layoutX="10.0" layoutY="10.0" prefHeight="306.0" prefWidth="301.0" text="coach" />
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </children>
+    </AnchorPane>
+  </children>
+</VBox>

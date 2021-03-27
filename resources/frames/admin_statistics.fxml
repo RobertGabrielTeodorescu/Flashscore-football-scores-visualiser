@@ -1,0 +1,325 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox prefHeight="800.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AdminStatisticsController">
+  <children>
+    <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="708.0" prefWidth="543.0" VBox.vgrow="ALWAYS">
+         <children>
+            <VBox layoutX="14.0" layoutY="279.0" prefHeight="516.0" prefWidth="590.0" AnchorPane.bottomAnchor="15.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="185.0">
+               <children>
+                  <Label alignment="CENTER" prefHeight="20.0" prefWidth="772.0" text="Ball Possession">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <HBox prefHeight="30.0" prefWidth="200.0">
+                     <children>
+                        <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="285.0">
+                           <children>
+                              <Button minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#minusBallPossession" prefHeight="25.0" prefWidth="25.0" text="-" />
+                              <Label fx:id="ball_possession1" alignment="CENTER" prefHeight="30.0" prefWidth="30.0" text="5" />
+                              <Button minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#plusBallPossession" prefHeight="25.0" prefWidth="25.0" text="+" />
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER_RIGHT" prefHeight="100.0" prefWidth="285.0">
+                           <children>
+                              <Button minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#plusBallPossession" prefHeight="25.0" prefWidth="25.0" text="-" />
+                              <Label fx:id="ball_possession2" alignment="CENTER" prefHeight="30.0" prefWidth="30.0" text="11" />
+                              <Button minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#minusBallPossession" prefHeight="25.0" prefWidth="25.0" text="+" />
+                           </children>
+                        </HBox>
+                     </children>
+                  </HBox>
+                  <Label alignment="CENTER" prefHeight="20.0" prefWidth="778.0" text="Goal Attempts">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <HBox layoutX="10.0" layoutY="40.0" prefHeight="30.0" prefWidth="200.0">
+                     <children>
+                        <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="285.0">
+                           <children>
+                              <Button minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#minusGoalAttempts1" prefHeight="25.0" prefWidth="25.0" text="-" />
+                              <Label fx:id="goal_attempts1" alignment="CENTER" prefHeight="30.0" prefWidth="30.0" text="5" />
+                              <Button minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#plusGoalAttempts1" prefHeight="25.0" prefWidth="25.0" text="+" />
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER_RIGHT" prefHeight="100.0" prefWidth="285.0">
+                           <children>
+                              <Button minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#minusGoalAttempts2" prefHeight="25.0" prefWidth="25.0" text="-" />
+                              <Label fx:id="goal_attempts2" alignment="CENTER" prefHeight="30.0" prefWidth="30.0" text="11" />
+                              <Button minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#plusGoalAttempts2" prefHeight="25.0" prefWidth="25.0" text="+" />
+                           </children>
+                        </HBox>
+                     </children>
+                  </HBox>
+                  <Label alignment="CENTER" prefHeight="20.0" prefWidth="791.0" text="Shots on Goal">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <HBox layoutX="10.0" layoutY="400.0" prefHeight="30.0" prefWidth="200.0">
+                     <children>
+                        <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="285.0">
+                           <children>
+                              <Button minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#minusShotsOnGoal1" prefHeight="25.0" prefWidth="25.0" text="-" />
+                              <Label fx:id="shots_on_goal1" alignment="CENTER" prefHeight="30.0" prefWidth="30.0" text="5" />
+                              <Button minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#plusShotsOnGoal1" prefHeight="25.0" prefWidth="25.0" text="+" />
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER_RIGHT" prefHeight="100.0" prefWidth="285.0">
+                           <children>
+                              <Button minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#minusShotsOnGoal2" prefHeight="25.0" prefWidth="25.0" text="-" />
+                              <Label fx:id="shots_on_goal2" alignment="CENTER" prefHeight="30.0" prefWidth="30.0" text="11" />
+                              <Button minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#plusShotsOnGoal2" prefHeight="25.0" prefWidth="25.0" text="+" />
+                           </children>
+                        </HBox>
+                     </children>
+                  </HBox>
+                  <Label alignment="CENTER" layoutX="10.0" layoutY="430.0" prefHeight="20.0" prefWidth="652.0" text="Shots off Goal">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <HBox layoutX="10.0" layoutY="430.0" prefHeight="30.0" prefWidth="200.0">
+                     <children>
+                        <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="285.0">
+                           <children>
+                              <Button minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#minusShotsOffGoal1" prefHeight="25.0" prefWidth="25.0" text="-" />
+                              <Label fx:id="shots_off_goal1" alignment="CENTER" prefHeight="30.0" prefWidth="30.0" text="5" />
+                              <Button minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#plusShotsOffGoal1" prefHeight="25.0" prefWidth="25.0" text="+" />
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER_RIGHT" prefHeight="100.0" prefWidth="285.0">
+                           <children>
+                              <Button minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#minusShotsOffGoal2" prefHeight="25.0" prefWidth="25.0" text="-" />
+                              <Label fx:id="shots_off_goal2" alignment="CENTER" prefHeight="30.0" prefWidth="30.0" text="11" />
+                              <Button minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#plusShotsOffGoal2" prefHeight="25.0" prefWidth="25.0" text="+" />
+                           </children>
+                        </HBox>
+                     </children>
+                  </HBox>
+                  <Label alignment="CENTER" prefHeight="20.0" prefWidth="652.0" text="Blocked Shots">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <HBox layoutX="10.0" layoutY="460.0" prefHeight="30.0" prefWidth="200.0">
+                     <children>
+                        <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="285.0">
+                           <children>
+                              <Button minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#minusBlockedShots1" prefHeight="25.0" prefWidth="25.0" text="-" />
+                              <Label fx:id="blocked_shots1" alignment="CENTER" prefHeight="30.0" prefWidth="30.0" text="5" />
+                              <Button minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#plusBlockedShots1" prefHeight="25.0" prefWidth="25.0" text="+" />
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER_RIGHT" prefHeight="100.0" prefWidth="285.0">
+                           <children>
+                              <Button minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#minusBlockedShots2" prefHeight="25.0" prefWidth="25.0" text="-" />
+                              <Label fx:id="blocked_shots2" alignment="CENTER" prefHeight="30.0" prefWidth="30.0" text="11" />
+                              <Button minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#plusBlockedShots2" prefHeight="25.0" prefWidth="25.0" text="+" />
+                           </children>
+                        </HBox>
+                     </children>
+                  </HBox>
+                  <Label alignment="CENTER" layoutX="10.0" layoutY="85.0" prefHeight="20.0" prefWidth="652.0" text="Free Kicks">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <HBox layoutX="10.0" layoutY="490.0" prefHeight="30.0" prefWidth="200.0">
+                     <children>
+                        <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="285.0">
+                           <children>
+                              <Button minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#minusFreeKicks1" prefHeight="25.0" prefWidth="25.0" text="-" />
+                              <Label fx:id="free_kicks1" alignment="CENTER" prefHeight="30.0" prefWidth="30.0" text="5" />
+                              <Button minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#plusFreeKicks1" prefHeight="25.0" prefWidth="25.0" text="+" />
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER_RIGHT" prefHeight="100.0" prefWidth="285.0">
+                           <children>
+                              <Button minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#minusFreeKicks2" prefHeight="25.0" prefWidth="25.0" text="-" />
+                              <Label fx:id="free_kicks2" alignment="CENTER" prefHeight="30.0" prefWidth="30.0" text="11" />
+                              <Button minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#plusFreeKicks2" prefHeight="25.0" prefWidth="25.0" text="+" />
+                           </children>
+                        </HBox>
+                     </children>
+                  </HBox>
+                  <Label alignment="CENTER" layoutX="10.0" layoutY="110.0" prefHeight="20.0" prefWidth="652.0" text="Corner Kicks">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <HBox layoutX="10.0" layoutY="520.0" prefHeight="30.0" prefWidth="200.0">
+                     <children>
+                        <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="285.0">
+                           <children>
+                              <Button minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#minusCornerKicks1" prefHeight="25.0" prefWidth="25.0" text="-" />
+                              <Label fx:id="corner_kicks1" alignment="CENTER" prefHeight="30.0" prefWidth="30.0" text="5" />
+                              <Button minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#plusCornerKicks1" prefHeight="25.0" prefWidth="25.0" text="+" />
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER_RIGHT" prefHeight="100.0" prefWidth="285.0">
+                           <children>
+                              <Button minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#minusCornerKicks2" prefHeight="25.0" prefWidth="25.0" text="-" />
+                              <Label fx:id="corner_kicks2" alignment="CENTER" prefHeight="30.0" prefWidth="30.0" text="11" />
+                              <Button minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#plusCornerKicks2" prefHeight="25.0" prefWidth="25.0" text="+" />
+                           </children>
+                        </HBox>
+                     </children>
+                  </HBox>
+                  <Label alignment="CENTER" layoutX="10.0" layoutY="135.0" prefHeight="20.0" prefWidth="652.0" text="Offsides">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <HBox layoutX="10.0" layoutY="400.0" prefHeight="30.0" prefWidth="200.0">
+                     <children>
+                        <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="285.0">
+                           <children>
+                              <Button minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#minusOffsides1" prefHeight="25.0" prefWidth="25.0" text="-" />
+                              <Label fx:id="offsides1" alignment="CENTER" prefHeight="30.0" prefWidth="30.0" text="5" />
+                              <Button minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#plusOffsides1" prefHeight="25.0" prefWidth="25.0" text="+" />
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER_RIGHT" prefHeight="100.0" prefWidth="285.0">
+                           <children>
+                              <Button minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#minusOffsides2" prefHeight="25.0" prefWidth="25.0" text="-" />
+                              <Label fx:id="offsides2" alignment="CENTER" prefHeight="30.0" prefWidth="30.0" text="11" />
+                              <Button minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#plusOffsides2" prefHeight="25.0" prefWidth="25.0" text="+" />
+                           </children>
+                        </HBox>
+                     </children>
+                  </HBox>
+                  <Label alignment="CENTER" layoutX="10.0" layoutY="160.0" prefHeight="20.0" prefWidth="652.0" text="Fouls">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <HBox layoutX="10.0" layoutY="580.0" prefHeight="30.0" prefWidth="200.0">
+                     <children>
+                        <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="285.0">
+                           <children>
+                              <Button minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#minusFouls1" prefHeight="25.0" prefWidth="25.0" text="-" />
+                              <Label fx:id="fouls1" alignment="CENTER" prefHeight="30.0" prefWidth="30.0" text="5" />
+                              <Button minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#plusFouls1" prefHeight="25.0" prefWidth="25.0" text="+" />
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER_RIGHT" prefHeight="100.0" prefWidth="285.0">
+                           <children>
+                              <Button minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#minusFouls2" prefHeight="25.0" prefWidth="25.0" text="-" />
+                              <Label fx:id="fouls2" alignment="CENTER" prefHeight="30.0" prefWidth="30.0" text="11" />
+                              <Button minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#plusFouls2" prefHeight="25.0" prefWidth="25.0" text="+" />
+                           </children>
+                        </HBox>
+                     </children>
+                  </HBox>
+                  <Label alignment="CENTER" layoutX="10.0" layoutY="185.0" prefHeight="20.0" prefWidth="652.0" text="Yellow Cards">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <HBox layoutX="10.0" layoutY="610.0" prefHeight="30.0" prefWidth="200.0">
+                     <children>
+                        <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="285.0">
+                           <children>
+                              <Button minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#minusYellowCards1" prefHeight="25.0" prefWidth="25.0" text="-" />
+                              <Label fx:id="yellow_cards1" alignment="CENTER" prefHeight="30.0" prefWidth="30.0" text="5" />
+                              <Button minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#plusYellowCards1" prefHeight="25.0" prefWidth="25.0" text="+" />
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER_RIGHT" prefHeight="100.0" prefWidth="285.0">
+                           <children>
+                              <Button minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#minusYellowCards2" prefHeight="25.0" prefWidth="25.0" text="-" />
+                              <Label fx:id="yellow_cards2" alignment="CENTER" prefHeight="30.0" prefWidth="30.0" text="11" />
+                              <Button minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#plusYellowCards2" prefHeight="25.0" prefWidth="25.0" text="+" />
+                           </children>
+                        </HBox>
+                     </children>
+                  </HBox>
+                  <Label alignment="CENTER" layoutX="10.0" layoutY="210.0" prefHeight="20.0" prefWidth="652.0" text="Red Cards">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <HBox layoutX="10.0" layoutY="610.0" prefHeight="30.0" prefWidth="200.0">
+                     <children>
+                        <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="285.0">
+                           <children>
+                              <Button minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#minusRedCards1" prefHeight="25.0" prefWidth="25.0" text="-" />
+                              <Label fx:id="red_cards1" alignment="CENTER" prefHeight="30.0" prefWidth="30.0" text="5" />
+                              <Button minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#plusRedCards1" prefHeight="25.0" prefWidth="25.0" text="+" />
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER_RIGHT" prefHeight="100.0" prefWidth="285.0">
+                           <children>
+                              <Button minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#minusRedCards2" prefHeight="25.0" prefWidth="25.0" text="-" />
+                              <Label fx:id="red_cards2" alignment="CENTER" prefHeight="30.0" prefWidth="30.0" text="11" />
+                              <Button minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#plusRedCards2" prefHeight="25.0" prefWidth="25.0" text="+" />
+                           </children>
+                        </HBox>
+                     </children>
+                  </HBox>
+                  <Label alignment="CENTER" layoutX="10.0" layoutY="235.0" prefHeight="20.0" prefWidth="652.0" text="Total Passes">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <HBox layoutX="10.0" layoutY="640.0" prefHeight="30.0" prefWidth="200.0">
+                     <children>
+                        <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="285.0">
+                           <children>
+                              <Button minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#minusTotalPasses1" prefHeight="25.0" prefWidth="25.0" text="-" />
+                              <Label fx:id="total_passes1" alignment="CENTER" prefHeight="30.0" prefWidth="30.0" text="5" />
+                              <Button minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#plusTotalPasses1" prefHeight="25.0" prefWidth="25.0" text="+" />
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER_RIGHT" prefHeight="100.0" prefWidth="285.0">
+                           <children>
+                              <Button minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#minusTotalPasses2" prefHeight="25.0" prefWidth="25.0" text="-" />
+                              <Label fx:id="total_passes2" alignment="CENTER" prefHeight="30.0" prefWidth="30.0" text="11" />
+                              <Button minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#plusTotalPasses2" prefHeight="25.0" prefWidth="25.0" text="+" />
+                           </children>
+                        </HBox>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+            <ImageView fx:id="teamLogo1" fitHeight="100.0" fitWidth="100.0" layoutX="98.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="100.0">
+               <image>
+                  <Image url="@../team_logos/Liverpool.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="teamLogo2" fitHeight="100.0" fitWidth="100.0" layoutX="406.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" AnchorPane.rightAnchor="100.0">
+               <image>
+                  <Image url="@../team_logos/Wolves.png" />
+               </image>
+            </ImageView>
+            <Label fx:id="score" alignment="CENTER" layoutX="250.0" layoutY="42.0" prefHeight="45.0" prefWidth="100.0" text="score">
+               <font>
+                  <Font name="System Bold" size="30.0" />
+               </font>
+            </Label>
+            <Label fx:id="teamName1" alignment="CENTER" layoutX="74.0" layoutY="131.0" prefHeight="21.0" prefWidth="152.0" text="teamName1">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <Label fx:id="teamName2" alignment="CENTER" layoutX="374.0" layoutY="131.0" prefHeight="21.0" prefWidth="152.0" text="teamName2">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <Label fx:id="time" alignment="CENTER" layoutX="250.0" layoutY="96.0" prefHeight="18.0" prefWidth="100.0" text="time" />
+         </children>
+    </AnchorPane>
+  </children>
+</VBox>

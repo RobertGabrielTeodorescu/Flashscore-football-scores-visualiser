@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ContextMenu?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.UserMainScreenController">
+   <children>
+      <HBox layoutX="2.0" prefHeight="70.0" prefWidth="760.0">
+         <children>
+            <ImageView fitHeight="73.0" fitWidth="750.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@flashscorelogo.png" />
+               </image>
+               <HBox.margin>
+                  <Insets left="130.0" />
+               </HBox.margin>
+            </ImageView>
+         </children>
+      </HBox>
+      <HBox layoutX="7.0" layoutY="72.0" prefHeight="320.0" prefWidth="750.0" AnchorPane.leftAnchor="7.0" AnchorPane.topAnchor="72.0">
+         <children>
+            <VBox prefHeight="320.0" prefWidth="120.0">
+               <children>
+                  <Label text="Leagues" textFill="#33c51d">
+                     <font>
+                        <Font name="Ebrima Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <ListView fx:id="myLeaguesListView" prefHeight="190.0" prefWidth="200.0" />
+                  <Label text="★My Teams" textFill="#c6da13">
+                     <font>
+                        <Font name="Ebrima Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <ListView fx:id="myTeamsListView" prefHeight="200.0" prefWidth="200.0" />
+               </children>
+            </VBox>
+            <TabPane prefHeight="350.0" prefWidth="540.0" tabClosingPolicy="UNAVAILABLE">
+              <tabs>
+                <Tab text="All Matches">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <TableView fx:id="allMatches" prefHeight="289.6" prefWidth="500.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                <columns>
+                                  <TableColumn fx:id="timeColumn" prefWidth="65.0" text="Time" />
+                                  <TableColumn fx:id="team1Column" prefWidth="120.0" text="Team1" />
+                                    <TableColumn fx:id="scoreColumn" prefWidth="75.0" text="Score" />
+                                    <TableColumn fx:id="team2Column" prefWidth="120.0" text="Team2" />
+                                    <TableColumn fx:id="refereeColumn" prefWidth="75.0" text="Referee" />
+                                    <TableColumn fx:id="stadiumColumn" prefWidth="85.0" text="Stadium" />
+                                </columns>
+                              </TableView>
+                           </children>
+                        </AnchorPane>
+                  </content>
+                     <contextMenu>
+                        <ContextMenu />
+                     </contextMenu>
+                </Tab>
+                <Tab text="Live">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="320.0" prefWidth="490.0">
+                           <children>
+                              <TableView fx:id="liveMatches" layoutX="113.0" layoutY="67.0" prefHeight="289.6" prefWidth="500.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                <columns>
+                                  <TableColumn fx:id="minuteLiveColumn" prefWidth="65.0" text="Minute" />
+                                  <TableColumn fx:id="team1LiveColumn" prefWidth="120.0" text="Team1" />
+                                    <TableColumn fx:id="scoreLiveColumn" prefWidth="75.0" text="Score" />
+                                    <TableColumn fx:id="team2LiveColumn" prefWidth="120.0" text="Team2" />
+                                    <TableColumn fx:id="refereeLiveColumn" prefWidth="75.0" text="Referee" />
+                                    <TableColumn fx:id="stadiumLiveColumn" prefWidth="75.0" text="Stadium" />
+                                </columns>
+                              </TableView>
+                           </children>
+                        </AnchorPane>
+                  </content>
+                </Tab>
+                  <Tab text="Final Results">
+                    <content>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <TableView fx:id="finishedMatches" prefHeight="289.6" prefWidth="536.8" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                <columns>
+                                  <TableColumn fx:id="statusFinishedColumn" prefWidth="65.0" text="Status" />
+                                  <TableColumn fx:id="team1FinishedColumn" prefWidth="120.0" text="Team1" />
+                                    <TableColumn fx:id="scoreFinishedColumn" prefWidth="75.0" text="Score" />
+                                    <TableColumn fx:id="team2FinishedColumn" prefWidth="120.0" text="Team2" />
+                                    <TableColumn fx:id="refereeFinishedColumn" prefWidth="75.0" text="Referee" />
+                                    <TableColumn fx:id="stadiumFinishedColumn" prefWidth="75.0" text="Stadium" />
+                                </columns>
+                              </TableView>
+                           </children>
+                        </AnchorPane>
+                    </content>
+                  </Tab>
+              </tabs>
+            </TabPane>
+            <VBox prefHeight="200.0" prefWidth="100.0" spacing="20.0">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#viewTeamPressed" text="View Team">
+                     <VBox.margin>
+                        <Insets left="10.0" top="70.0" />
+                     </VBox.margin>
+                  </Button>
+                  <Button mnemonicParsing="false" onAction="#viewLeaguePressed" text="View League">
+                     <VBox.margin>
+                        <Insets left="8.0" />
+                     </VBox.margin>
+                  </Button>
+                  <Button mnemonicParsing="false" onAction="#viewMatchPressed" text="View Match">
+                     <VBox.margin>
+                        <Insets left="12.0" />
+                     </VBox.margin>
+                  </Button>
+               </children>
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+            </VBox>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>

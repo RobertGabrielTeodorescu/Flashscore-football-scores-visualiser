@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AdminTeamsController">
+   <children>
+      <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1000.0">
+         <children>
+            <TableView fx:id="tableView" layoutX="15.0" layoutY="74.0" prefHeight="304.0" prefWidth="933.0">
+              <columns>
+                  <TableColumn fx:id="nameColumn" onEditCommit="#changeNameCellEdit" prefWidth="125.0" text="Name" />
+                  <TableColumn fx:id="leagueColumn" onEditCommit="#changeLeagueCellEdit" prefWidth="121.0" text="League" />
+                  <TableColumn fx:id="rankColumn" onEditCommit="#changeRankCellEdit" prefWidth="71.0" text="Rank" />
+                  <TableColumn fx:id="matchesColumn" onEditCommit="#changeMatchesCellEdit" prefWidth="88.0" text="Matches" />
+                  <TableColumn fx:id="winsColumn" minWidth="5.0" onEditCommit="#changeWinsCellEdit" prefWidth="67.0" text="Wins" />
+                  <TableColumn fx:id="drawsColumn" onEditCommit="#changeDrawsCellEdit" prefWidth="70.0" text="Draws" />
+                  <TableColumn fx:id="lossesColumn" onEditCommit="#changeLossesCellEdit" prefWidth="72.0" text="Losses" />
+                  <TableColumn fx:id="goalsColumn" onEditCommit="#changeGoalsCellEdit" text="Goals" />
+                  <TableColumn fx:id="pointsColumn" onEditCommit="#changePointsCellEdit" prefWidth="81.0" text="Points" />
+                  <TableColumn fx:id="coachColumn" minWidth="0.0" onEditCommit="#changeCoachCellEdit" prefWidth="157.0" text="Coach" />
+              </columns>
+            </TableView>
+            <HBox layoutX="10.0" layoutY="535.0" prefHeight="32.0" prefWidth="311.0">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#addTeam" prefHeight="32.0" prefWidth="92.0" text="Add team" />
+                  <Button mnemonicParsing="false" onAction="#removeTeam" prefHeight="32.0" prefWidth="109.0" text="Remove team" />
+                  <Button mnemonicParsing="false" onAction="#resetStats" prefHeight="32.0" prefWidth="113.0" text="Reset stats" />
+               </children>
+            </HBox>
+            <HBox layoutX="14.0" layoutY="411.0" prefHeight="32.0" prefWidth="747.0">
+               <children>
+                  <TextField fx:id="nameTextField" prefHeight="44.0" prefWidth="149.0" promptText="Name" />
+                  <TextField fx:id="leagueTextField" prefHeight="48.0" prefWidth="149.0" promptText="League" />
+                  <TextField fx:id="rankTextField" prefHeight="47.0" prefWidth="149.0" promptText="Rank" />
+                  <TextField fx:id="matcesTextField" prefHeight="49.0" prefWidth="149.0" promptText="Matches" />
+                  <TextField fx:id="winsTextField" prefHeight="45.0" prefWidth="149.0" promptText="Wins" />
+               </children>
+            </HBox>
+            <HBox layoutX="12.0" layoutY="461.0" prefHeight="32.0" prefWidth="747.0">
+               <children>
+                  <TextField fx:id="drawsTextField" prefHeight="44.0" prefWidth="149.0" promptText="Draws" />
+                  <TextField fx:id="lossesTextField" prefHeight="48.0" prefWidth="149.0" promptText="Losses" />
+                  <TextField fx:id="goalsTextField" prefHeight="47.0" prefWidth="149.0" promptText="Goals" />
+                  <TextField fx:id="pointsTextField" prefHeight="49.0" prefWidth="149.0" promptText="Points" />
+                  <TextField fx:id="coachTextField" prefHeight="45.0" prefWidth="149.0" promptText="Coach" />
+               </children>
+            </HBox>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

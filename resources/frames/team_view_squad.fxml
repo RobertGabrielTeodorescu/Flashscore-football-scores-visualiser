@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.TeamViewSquad">
+   <children>
+      <AnchorPane prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: rgb(0, 128, 0);">
+          <children>
+              <HBox layoutX="14.0" layoutY="14.0" prefHeight="150.0" prefWidth="772.0" style="-fx-border-width: 2; -fx-border-color: black; -fx-background-color: white;">
+                  <children>
+                      <ImageView fx:id="imageView" fitHeight="150.0" fitWidth="216.0" pickOnBounds="true" preserveRatio="true" />
+                      <StackPane prefHeight="150.0" prefWidth="290.0">
+                          <children>
+                              <Label fx:id="teamName" text="Label" />
+                          </children>
+                      </StackPane>
+                      <StackPane prefHeight="150.0" prefWidth="262.0">
+                     <children>
+                        <Button onAction="#addToFavorites" mnemonicParsing="false" text="Add to favorites" />
+                     </children>
+                      </StackPane>
+                  </children>
+              </HBox>
+              <HBox layoutX="14.0" layoutY="181.0" prefHeight="35.0" prefWidth="772.0">
+                  <children>
+                      <Button mnemonicParsing="false" onAction="#changeToFixturesFrame" prefHeight="43.0" prefWidth="100.0" text="Fixtures" />
+                      <Button mnemonicParsing="false" onAction="#changeToResultsFrame" prefHeight="36.0" prefWidth="100.0" text="Results" />
+                      <Button mnemonicParsing="false" onAction="#changeToStandingsFrame" prefHeight="37.0" prefWidth="100.0" text="Standings" />
+                      <Button mnemonicParsing="false" prefHeight="51.0" prefWidth="100.0" text="Squad" />
+                  </children>
+              </HBox>
+              <TableView fx:id="tableView" layoutX="14.0" layoutY="234.0" prefHeight="341.0" prefWidth="772.0">
+                  <columns>
+                      <TableColumn fx:id="jerseyColumn" prefWidth="75.0" resizable="false" text="Jersey" />
+                      <TableColumn fx:id="nameColumn" prefWidth="187.0" resizable="false" text="Name" />
+                      <TableColumn fx:id="positionColumn" prefWidth="75.0" text="Position" />
+                      <TableColumn fx:id="ageColumn" prefWidth="75.0" resizable="false" text="Age" />
+                      <TableColumn fx:id="matchesColumn" prefWidth="75.0" resizable="false" text="Matches" />
+                      <TableColumn fx:id="goalsColumn" prefWidth="75.0" resizable="false" text="Goals" />
+                      <TableColumn fx:id="yellowCardsColumn" prefWidth="100.0" text="Yellow cards" />
+                      <TableColumn fx:id="redCardsColumn" prefWidth="111.0" text="Red cards" />
+                  </columns>
+              </TableView>
+          </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AdminLeagues">
+   <children>
+      <TableView fx:id="tableView" layoutX="14.0" layoutY="14.0" prefHeight="230.0" prefWidth="394.0">
+        <columns>
+          <TableColumn fx:id="nameColumn" onEditCommit="#changeLeagueNameCellEdit" prefWidth="117.0" text="Name" />
+          <TableColumn fx:id="numberOfTeamsColumn" onEditCommit="#changeNumberOfTeamsCellEdit" prefWidth="137.0" text="Number of teams" />
+            <TableColumn fx:id="currentFixtureColumn" onEditCommit="#changeCurrentFixtureCellEdit" prefWidth="139.0" text="Current Fixture" />
+        </columns>
+      </TableView>
+      <HBox layoutX="14.0" layoutY="321.0" prefHeight="32.0" prefWidth="297.0">
+         <children>
+            <Button onAction="#addLeague" mnemonicParsing="false" prefHeight="32.0" prefWidth="103.0" text="Add league" />
+            <Button onAction="#removeLeague" mnemonicParsing="false" prefHeight="32.0" prefWidth="98.0" text="Remove league" />
+         </children>
+      </HBox>
+      <Button layoutX="371.0" layoutY="321.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="131.0" text="Back to main menu" />
+      <HBox prefHeight="100.0" prefWidth="200.0" />
+      <TextField fx:id="nameTextField" layoutX="14.0" layoutY="268.0" prefHeight="25.0" prefWidth="114.0" promptText="Name" />
+      <TextField fx:id="numberOfTeamsTextField" layoutX="247.0" layoutY="268.0" prefHeight="25.0" prefWidth="114.0" promptText="Current fixture" />
+      <TextField fx:id="currentFixtureTextField" layoutX="127.0" layoutY="268.0" prefHeight="25.0" prefWidth="123.0" promptText="Number of teams" />
+   </children>
+</AnchorPane>

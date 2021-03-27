@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AdminMatchesController">
+   <children>
+      <HBox layoutX="10.0" layoutY="535.0" prefHeight="32.0" prefWidth="558.0">
+         <children>
+            <Button mnemonicParsing="false" onAction="#addMatch" prefHeight="32.0" prefWidth="109.0" text="Add Match" />
+            <Button mnemonicParsing="false" onAction="#removeMatch" prefHeight="32.0" prefWidth="109.0" text="Remove Match" />
+            <Button layoutX="228.0" layoutY="10.0" mnemonicParsing="false" onAction="#updateStatistics" prefHeight="32.0" prefWidth="106.0" text="Update Statistics" />
+            <Button layoutX="228.0" layoutY="10.0" mnemonicParsing="false" onAction="#updateSummary" prefHeight="32.0" prefWidth="113.0" text="Update Summary" />
+            <Button mnemonicParsing="false" onAction="#changeToLineupsFrame" prefHeight="32.0" prefWidth="125.0" text="Create lineups" />
+         </children>
+      </HBox>
+      <TableView fx:id="tableView" layoutX="14.0" layoutY="73.0" prefHeight="304.0" prefWidth="969.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="17.0">
+        <columns>
+            <TableColumn fx:id="timeColumn" onEditCommit="#changeTime" prefWidth="185.0" text="Time" />
+          <TableColumn fx:id="team1Column" onEditCommit="#changeTeam1CellEdit" prefWidth="127.0" text="Team 1" />
+            <TableColumn fx:id="resultColumn" onEditCommit="#changeResult" prefWidth="112.0" text="Result" />
+          <TableColumn fx:id="team2Column" onEditCommit="#changeTeam2CellEdit" prefWidth="176.0" text="Team 2" />
+            <TableColumn fx:id="stadiumColumn" onEditCommit="#changeStadium" prefWidth="167.0" text="Stadium" />
+            <TableColumn fx:id="refereeColumn" onEditCommit="#changeReferee" prefWidth="130.0" text="Referee" />
+        </columns>
+      </TableView>
+      <HBox layoutX="14.0" layoutY="411.0" prefHeight="32.0" prefWidth="300.0">
+         <children>
+            <TextField fx:id="team1Text" promptText="Team 1" />
+            <TextField fx:id="team2Text" promptText="Team 2" />
+         </children>
+      </HBox>
+      <HBox layoutX="12.0" layoutY="461.0" prefHeight="32.0" prefWidth="747.0">
+         <children>
+            <TextField fx:id="timeText" promptText="Time" />
+            <TextField fx:id="stadiumText" promptText="Stadium" />
+            <TextField fx:id="refereeText" promptText="Referee" />
+            <TextField fx:id="resultText" promptText="Result" />
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>
